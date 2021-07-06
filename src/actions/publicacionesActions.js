@@ -12,7 +12,6 @@ const publicacionesTraerTodos = () => async (dispatch) => {
   });
 
   try {
-    await new Promise((r) => setTimeout(r, 1000));
     const result = await axios.get(
       "https://jsonplaceholder.typicode.com/posts",
       { timeout: 2000 }
@@ -31,14 +30,12 @@ const publicacionesTraerTodos = () => async (dispatch) => {
 
 const publicacionesPorUsuario = (userId) => async (dispatch, getState) => {
   const { usuarios } = getState().usuariosReducer;
-  console.log("usuarios: ", usuarios);
 
   dispatch({
     type: CARGANDO,
   });
 
   try {
-    await new Promise((r) => setTimeout(r, 1000));
     const result = await axios.get(
       `https://jsonplaceholder.typicode.com/posts?userId=${userId}`,
       { timeout: 2000 }
