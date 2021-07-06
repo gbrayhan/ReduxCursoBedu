@@ -35,7 +35,7 @@ const Publicaciones = (props) => {
 
     <div>
       {usuario?.name && <h2>Publicaciones de {usuario?.name} </h2>}
-      {publicacionesReducer.publicaciones.map((publicacion) => (
+      {usuario?.name && publicacionesReducer.publicaciones.map((publicacion) => (
         <div key={publicacion.id}>
           <h4>{publicacion.title}</h4>
           <div>
