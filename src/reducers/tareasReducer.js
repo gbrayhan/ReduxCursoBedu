@@ -1,4 +1,4 @@
-import {CARGANDO, ERROR, TRAER_TODOS} from "../types/usuariosTypes";
+import {CARGANDO, ERROR, TRAER_TODAS} from "../types/tareasTypes";
 
 const INITIAL_STATE = {
   tareas: [],
@@ -8,7 +8,7 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case TRAER_TODOS:
+    case TRAER_TODAS:
       return {
         ...state,
         tareas: action.payload,

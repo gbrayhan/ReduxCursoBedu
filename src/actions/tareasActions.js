@@ -1,7 +1,7 @@
 import axios from "axios";
 import {CARGANDO, ERROR, TRAER_TODAS} from "../types/tareasTypes";
 
-const usuariosTraerTodas = () => async (dispatch) => {
+const traerTodas = () => async (dispatch) => {
   dispatch({
     type: CARGANDO,
   });
@@ -25,7 +25,7 @@ const usuariosTraerTodas = () => async (dispatch) => {
 };
 
 const tareasActions = {
-  usuariosTraerTodas,
+  traerTodas,
 };
 
 export default tareasActions;

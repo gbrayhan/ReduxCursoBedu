@@ -4,9 +4,17 @@ import tareasActions from "../../actions/tareasActions";
 
 const Tareas = props => {
   useEffect(() => {
+    props.traerTodas()
+    debugger
+    console.log(props)
+  },[])
+
+
+  useEffect(() => {
     debugger
     console.log(props)
   })
+
 
   return (
     <div>
